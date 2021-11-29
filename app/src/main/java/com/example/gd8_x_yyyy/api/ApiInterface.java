@@ -2,6 +2,8 @@ package com.example.gd8_x_yyyy.api;
 
 import com.example.gd8_x_yyyy.models.Mahasiswa;
 import com.example.gd8_x_yyyy.models.MahasiswaResponse;
+import com.example.gd8_x_yyyy.models.Random;
+import com.example.gd8_x_yyyy.models.RandomResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -34,4 +36,8 @@ public interface ApiInterface {
     @Headers({"Accept: application/json"})
     @DELETE("mahasiswa/{id}")
     Call<MahasiswaResponse> deleteMahasiswa(@Path("id") long id);
+
+    @Headers({"Accept: application/json"})
+    @POST("random")
+    Call<RandomResponse> createRandom(@Body Random random);
 }

@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RetrofitAPI">
         <activity
-            android:name="com.example.gd8_x_yyyy.AddEditActivity"
+            android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.gd8_x_yyyy.MainActivity"
+            android:name=".AddEditActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RandomActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
