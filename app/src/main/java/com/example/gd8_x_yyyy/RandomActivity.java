@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.gd8_x_yyyy.UnitTesting.ActivityUtil;
+import com.example.gd8_x_yyyy.UnitTesting.RandomView;
 import com.example.gd8_x_yyyy.api.ApiClient;
 import com.example.gd8_x_yyyy.api.ApiInterface;
 import com.example.gd8_x_yyyy.models.Random;
@@ -22,7 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RandomActivity extends AppCompatActivity {
+public class RandomActivity extends AppCompatActivity implements RandomView {
 
     private ApiInterface apiService;
     private EditText etEmail, etPassword, etKotaAsal;
@@ -90,5 +92,48 @@ public class RandomActivity extends AppCompatActivity {
                         t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public String getEmail()
+    {
+        return etEmail.getText().toString();
+    }
+    @Override
+    public void showEmailError(String message)
+    {
+        etEmail.setError(message);
+    }
+    @Override
+    public String getPassword()
+    {
+        return etPassword.getText().toString();
+    }
+    @Override
+    public void showPasswordError(String message)
+    {
+        etPassword.setError(message);
+    }
+    @Override
+    public String getKotaAsal()
+    {
+        return etKotaAsal.getText().toString();
+    }
+    @Override
+    public void showKotaAsalError(String message)
+    {
+        etKotaAsal.setError(message);
+    }
+    @Override
+    public void startMainRandom() {
+        new ActivityUtil(this).startMainRandom();
+    }
+    @Override
+    public void showRandomError(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public void showErrorResponse(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
