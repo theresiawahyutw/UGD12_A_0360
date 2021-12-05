@@ -164,25 +164,6 @@ public class RandomActivityTest0360 {
         materialButton5.perform(click());
         onView(isRoot()).perform(waitFor(3000));
 
-//        ViewInteraction textInputEditText8 = onView(
-//                allOf(withId(R.id.etEmail), withText("bulan@gmail.com"),
-//                        childAtPosition(
-//                                childAtPosition(
-//                                        withId(R.id.layout_email),
-//                                        0),
-//                                1),
-//                        isDisplayed()));
-//        textInputEditText8.perform(replaceText("bulan@gmail.com"));
-//
-//        ViewInteraction textInputEditText9 = onView(
-//                allOf(withId(R.id.etEmail), withText("bulan@gmail.com"),
-//                        childAtPosition(
-//                                childAtPosition(
-//                                        withId(R.id.layout_email),
-//                                        0),
-//                                1),
-//                        isDisplayed()));
-//        textInputEditText9.perform(closeSoftKeyboard());
 
         ViewInteraction textInputEditText10 = onView(
                 allOf(withId(R.id.etPassword),
