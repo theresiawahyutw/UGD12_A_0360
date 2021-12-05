@@ -38,7 +38,7 @@ public class RandomActivityTest0360 {
     public ActivityTestRule<RandomActivity> mActivityTestRule = new ActivityTestRule<>(RandomActivity.class);
 
     @Test
-    public void randomActivityTest0242() {
+    public void randomActivityTest0360() {
         ViewInteraction materialButton = onView(
                 allOf(withId(R.id.btn_save), withText("Simpan"),
                         childAtPosition(
@@ -318,10 +318,10 @@ public class RandomActivityTest0360 {
                                         0),
                                 1),
                         isDisplayed()));
-        textInputEditText19.perform(replaceText("Kediri"));
+        textInputEditText19.perform(replaceText("Kediri Jatim"));
 
         ViewInteraction textInputEditText20 = onView(
-                allOf(withId(R.id.etKotaAsal), withText("Kediri"),
+                allOf(withId(R.id.etKotaAsal), withText("Kediri Jatim"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(R.id.layout_kotaAsal),
